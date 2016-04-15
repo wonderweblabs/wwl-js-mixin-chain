@@ -64,7 +64,7 @@ MixinB = (superclass) -> class MB extends superclass
 #### Inherit `SuperClass` only
 
 ```coffeescript
-ext = require('../lib/ext')
+ext = require('wwl-js-mixin-chain')
 
 class T extends ext(SuperClass).with()
 t = new T()
@@ -86,7 +86,7 @@ T.getStaticValue4()   # 4
 #### Inherit `SuperClass` with `MixinA`
 
 ```coffeescript
-ext = require('../lib/ext')
+ext = require('wwl-js-mixin-chain')
 
 class T extends ext(SuperClass).with(MixinA)
 t = new T()
@@ -108,7 +108,7 @@ T.getStaticValue4()   # 'MixinA'
 #### Inherit `SuperClass` with `MixinB`
 
 ```coffeescript
-ext = require('../lib/ext')
+ext = require('wwl-js-mixin-chain')
 
 class T extends ext(SuperClass).with(MixinB)
 t = new T()
@@ -130,7 +130,7 @@ T.getStaticValue4()   # 'MixinB'
 #### Inherit `SuperClass` with `MixinA` and `MixinB`
 
 ```coffeescript
-ext = require('../lib/ext')
+ext = require('wwl-js-mixin-chain')
 
 class T extends ext(SuperClass).with(MixinA, MixinB)
 t = new T()
@@ -152,7 +152,7 @@ T.getStaticValue4()   # 'MixinB'
 #### Inherit `SuperClass` with `MixinB` and `MixinA`
 
 ```coffeescript
-ext = require('../lib/ext')
+ext = require('wwl-js-mixin-chain')
 
 class T extends ext(SuperClass).with(MixinB, MixinA)
 t = new T()
