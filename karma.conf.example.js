@@ -37,12 +37,13 @@ module.exports = function(config) {
     browserify: {
       debug: true,
       transform: [
-        'coffeeify',
+        ['coffeeify', { global: true }],
         [
           'browserify-istanbul', {
             instrumenterConfig: {
               embedSource: true
-            }
+            },
+            global: true
           }
         ]
       ],
